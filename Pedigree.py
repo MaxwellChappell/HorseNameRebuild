@@ -39,9 +39,9 @@ def process_line(data, horses, generation):
 
 
 def save_file(horse_data):
-    with open(f"{START_HORSE[0]}.txt", 'w+') as f:
-        for horse in horse_data:
-            f.write(horse.print_info())
+    with open(f"{START_HORSE.name}.txt", 'w+') as f:
+        for h in horse_data:
+            f.write(h.print_info())
 
 
 def main():
