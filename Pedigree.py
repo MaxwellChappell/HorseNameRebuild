@@ -33,7 +33,7 @@ def process_line(data, horses, generation):
                 global count
                 count += 1
                 process_horse(horses, link, new_gen)
-                print(count, link)
+                #print(count, link)
         else:
             horses[horses.index(horse)].add_generation(new_gen)
 
