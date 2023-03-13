@@ -34,8 +34,8 @@ def first_run():
 
 
 def normal_run():
-    td = load("to_do.csv")
-    d = load("done.csv")
+    td = load("data/to_do.csv")
+    d = load("data/done.csv")
     return td, d
 
 
@@ -47,8 +47,8 @@ def update(td, d):
     print("Done: ", len(d))
     print(datetime.now() - start_time, count)
     print()
-    save(d, "done.csv")
-    save(td, "to_do.csv")
+    save(d, "data/done.csv")
+    save(td, "data/to_do.csv")
 
 
 to_do, done = normal_run()
