@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 from Horse import Horse
 
-global count, on_stack
+global count
 count = 0
-on_stack = 0
+START_HORSE = Horse("AT THE STATIION2", "/at+the+station2", 1)
 
 
 def process_horse(horses, start_horse, generation):
@@ -39,14 +39,12 @@ def process_line(data, horses, generation):
 
 
 def save_file(horse_data):
-    with open("grand fappy.txt", 'w+') as f:
+    with open(f"{START_HORSE[0]}.txt", 'w+') as f:
         for horse in horse_data:
             f.write(horse.print_info())
 
 
 def main():
-    START_HORSE = Horse("GRAND FAPPY", "/grand+fappy", 1)
-
     horses = [START_HORSE]
     generation = 1
 
