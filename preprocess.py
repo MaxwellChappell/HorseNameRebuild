@@ -13,4 +13,4 @@ df = df[~filter]
 print(df)
 
 
-df.to_csv("preprocessed.csv",  index=False)
+df.to_csv("data/preprocessed.csv",  index=False)
